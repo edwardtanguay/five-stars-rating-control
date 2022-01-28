@@ -1,8 +1,8 @@
 const starsElem = document.querySelector('.stars');
 const numberElem = document.querySelector('.number');
 
-const cachedStars = localStorage.getItem('stars');
-const number = cachedStars === null ? 3 : cachedStars; 
+const cachedStars = Number(localStorage.getItem('stars'));
+const number = cachedStars === null ? 3 : cachedStars;
 
 const createStars = (number) => {
 	starsElem.innerHTML = '';
