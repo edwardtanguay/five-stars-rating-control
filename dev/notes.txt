@@ -11,10 +11,10 @@
 - x implement local storage to remember star number on page reload
 	- x fix bug, stars disappear
 	- x understand bug
-- ,, refactor into a class
-	- .. move functions into a module
-	- turn functions into class
-
+- x refactor into a class
+	- x move functions into a module
+	- x turn functions into class
+- .. turn onclick into addEventListener
 
 
 - load npm module (lodash, moment) and test modules

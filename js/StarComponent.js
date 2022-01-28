@@ -1,30 +1,37 @@
 export class StarComponent {
+
 	constructor(document) {
 		this.document = document;
 		this.starsElem = this.document.querySelector('.stars');
 		this.numberElem = this.document.querySelector('.number');
+		this.numberOfStars = 3;
 	}
 
-	setStars(number) {
-		this.createStars(number);
-		localStorage.setItem('stars', number);
+	setStars = (numberOfStars) => {
+		this.numberOfStars = numberOfStars;
+		this.createStars();
+		localStorage.setItem('numberOfStars', this.numberOfStars);
 	}
 
-	createStars(number) {
+	createStars() {
 		this.starsElem.innerHTML = '';
-		for (let i = 1; i <= number; i++) {
-			this.starsElem.innerHTML += `<i onclick="starComponent.setStars(${i})" class="fa fa-star"></i>`;
+		for (let i = 1; i <= 5; i++) {
+			const starElem = document.createElement('i');
+			if (i <= this.numberOfStars) {
+				starElem.classList.add('fa', 'fa-star');
+			} else {
+				starElem.classList.add('fa', 'fa-star-o');
+			}
+			starElem.addEventListener('click', () => this.setStars(i));
+			this.starsElem.appendChild(starElem);
 		}
-		for (let i = number + 1; i <= 5; i++) {
-			this.starsElem.innerHTML += `<i onclick="starComponent.setStars(${i})" class="fa fa-star-o"></i>`;
-		}
-		this.numberElem.innerText = number;
+		this.numberElem.innerText = this.numberOfStars;
 	}
 
 	render() {
-		const cachedStars = Number(localStorage.getItem('stars'));
-		const number = cachedStars === null ? 3 : cachedStars;
-		this.createStars(number);
+		const cachedStars = Number(localStorage.getItem('numberOfStars'));
+		this.numberOfStars = cachedStars === null ? 3 : cachedStars;
+		this.createStars();
 	}
 
 }
