@@ -21,6 +21,10 @@ body {
 	color: goldenrod;
 }
 
+.fa-star, .fa-star-o {
+	cursor: pointer;
+}
+
 .number {
 	font-size: 7rem;
 	text-align:center;

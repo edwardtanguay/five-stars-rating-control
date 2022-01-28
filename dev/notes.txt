@@ -4,4 +4,8 @@
 	- x when you click on star, show alert test
 	- x when you click on star, show that star's number
 	- x change number in onStars
-- .. when click a star, change number of stars filled
+- x when click a star, change number of stars filled
+	- x refactor code to function: createStars()
+	- x call createStars on page load
+	- x call createStars on star click
+- .. implement local storage to remember star number on page reload
