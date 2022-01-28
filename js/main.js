@@ -1,3 +1,5 @@
+import { setStars } from './StarComponent.js';
+
 const starsElem = document.querySelector('.stars');
 const numberElem = document.querySelector('.number');
 
@@ -13,11 +15,6 @@ const createStars = (number) => {
 		starsElem.innerHTML += `<i onclick="setStars(${i})" class="fa fa-star-o"></i>`;
 	}
 	numberElem.innerText = number;
-}
-
-const setStars = (number) => {
-	createStars(number);
-	localStorage.setItem('stars', number);
 }
 
 createStars(number);
