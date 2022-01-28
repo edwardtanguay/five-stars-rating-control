@@ -1,2 +1,7 @@
-- add dynamic JavaScript
-- .. display number of starts that is in variable: number
+- x add dynamic JavaScript
+- x display number of starts that is in variable: number
+- x when click on star, change the number
+	- x when you click on star, show alert test
+	- x when you click on star, show that star's number
+	- x change number in onStars
+- .. when click a star, change number of stars filled
