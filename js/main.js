@@ -1,3 +1,5 @@
 import { StarComponent } from './StarComponent.js';
 
-StarComponent.instantiate(document);
+for (let i = 1; i <= 16; i++) {
+	StarComponent.instantiate(document);
+}

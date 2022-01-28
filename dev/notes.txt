@@ -16,7 +16,9 @@
 	- x turn functions into class
 - x turn onclick into addEventListener
 - x instantiate
-- .. create four
+- x create four
+- x display in grid
+- fix localStorage
 
 - load npm module (lodash, moment) and test modules
 
