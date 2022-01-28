@@ -1,4 +1,3 @@
 import { StarComponent } from './StarComponent.js';
 
-const starComponent = new StarComponent(document);
-starComponent.render();
+const starComponent = StarComponent.instantiate(1, document).render();

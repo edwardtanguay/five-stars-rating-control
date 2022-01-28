@@ -14,8 +14,8 @@
 - x refactor into a class
 	- x move functions into a module
 	- x turn functions into class
-- .. turn onclick into addEventListener
-
+- x turn onclick into addEventListener
+- .. instantiate
 
 - load npm module (lodash, moment) and test modules
 
