@@ -1,1 +1,2 @@
-- .. add dynamic JavaScript
+- add dynamic JavaScript
+- .. display number of starts that is in variable: number
