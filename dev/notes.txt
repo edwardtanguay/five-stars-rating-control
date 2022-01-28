@@ -18,7 +18,7 @@
 - x instantiate
 - x create four
 - x display in grid
-- fix localStorage
+- .. fix localStorage
 
 - load npm module (lodash, moment) and test modules
 

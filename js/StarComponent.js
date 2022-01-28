@@ -1,7 +1,8 @@
 export class StarComponent {
 
-	constructor(document, numberOfStars = 3) {
+	constructor(document, id, numberOfStars = 3) {
 		this.document = document;
+		this.id = id;
 		this.contentElem = this.document.querySelector('.content');
 		this.starControlElem = this.createDivWithClassNameAndAppend('starControl', this.contentElem);
 		this.starsElem = this.createDivWithClassNameAndAppend('stars', this.starControlElem);
@@ -24,7 +25,7 @@ export class StarComponent {
 	setStars = (numberOfStars) => {
 		this.numberOfStars = numberOfStars;
 		this.createStars();
-		localStorage.setItem('numberOfStars', this.numberOfStars);
+		localStorage.setItem(StarComponent.getComponentStateIdCode(this.id), this.numberOfStars);
 	}
 
 	createStars() {
@@ -42,10 +43,14 @@ export class StarComponent {
 		this.numberElem.innerText = this.numberOfStars;
 	}
 
-	static instantiate(document) {
-		const cachedStars = Number(localStorage.getItem('numberOfStars'));
+	static getComponentStateIdCode(id) {
+		return `numberOfStars-${id}`;
+	}
+
+	static instantiate(document, id) {
+		const cachedStars = Number(localStorage.getItem(StarComponent.getComponentStateIdCode(id)));
 		const numberOfStars = cachedStars === 0 ? 3 : cachedStars;
-		const starComponent = new StarComponent(document, numberOfStars);
+		const starComponent = new StarComponent(document, id, numberOfStars);
 		starComponent.createStars();
 	}
 
