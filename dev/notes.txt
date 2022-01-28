@@ -15,7 +15,8 @@
 	- x move functions into a module
 	- x turn functions into class
 - x turn onclick into addEventListener
-- .. instantiate
+- x instantiate
+- .. create four
 
 - load npm module (lodash, moment) and test modules
 

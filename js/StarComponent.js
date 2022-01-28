@@ -34,7 +34,7 @@ export class StarComponent {
 		this.createStars();
 	}
 
-	static instantiate(id, document) {
+	static instantiate(document) {
 		return new StarComponent(document);
 	}
 
