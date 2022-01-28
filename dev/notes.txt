@@ -8,5 +8,6 @@
 	- x refactor code to function: createStars()
 	- x call createStars on page load
 	- x call createStars on star click
-- ,, implement local storage to remember star number on page reload
-	- fix bug, stars disappear
+- x implement local storage to remember star number on page reload
+	- x fix bug, stars disappear
+	- x understand bug
